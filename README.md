@@ -82,8 +82,8 @@ For this boilerplate the testcases from the [jasmine-boilerplte](https://github.
 ### Sauce Labs Real Device Cloud
 This boilerplate now also provides a setup for testing with the Real Device Cloud (RDC) of Sauce Labs. Please check the [SauceLabs](./config/saucelabs)-folder to see the setup for iOS and Android.
 
-> With the latest version of WebdriverIO (`5.4.13` and higher) the iOS and Android config holds: 
-> - automatic US or EU RDC cloud selection by providing a `region` in the config, see the [iOS](./config/saucelabs/wdio.ios.rdc.app.conf.js) and the [Android](./config/saucelabs/wdio.ios.rdc.app.conf.js) configs 
+> With the latest version of WebdriverIO (`5.4.13` and higher) the iOS and Android config holds:
+> - automatic US or EU RDC cloud selection by providing a `region` in the config, see the [iOS](./config/saucelabs/wdio.ios.rdc.app.conf.js) and the [Android](./config/saucelabs/wdio.ios.rdc.app.conf.js) configs
 > - automatic update of the teststatus in the RDC cloud without using a customer script
 
 Make sure you install the latest version of the `@wdio/sauce-service` with
@@ -99,7 +99,7 @@ There are 2 scripts that can be used, see the [`package.json`](./package.json), 
 
     // For iOS
     $ npm run ios.sauce.rdc.app
-    
+
     // For Android
     $ npm run android.sauce.rdc.app
 
@@ -108,3 +108,14 @@ See [FAQ](./docs/FAQ.md)
 
 ## Tips and Tricks
 See [Tips and Tricks](./docs/TIPS_TRICKS.md)
+
+## driver.compareImages is not a function
+
+Some scripts have been added to this project to demonstrate an issue I'm having with [`compareImages`](https://webdriver.io/docs/api/appium.html#compareimages). To execute these and reproduce:
+
+```
+npm run ios.app.imgCompare
+npm run ios.browser.imgCompare
+npm run android.app.imgCompare
+npm run android.browser.imgCompare
+```

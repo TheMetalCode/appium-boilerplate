@@ -5,10 +5,14 @@
   "scripts": {
     "android.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.android.rdc.app.conf.js",
     "android.app": "./node_modules/.bin/wdio ./config/wdio.android.app.conf.js",
+    "android.app.imgCompare": "./node_modules/.bin/wdio ./config/wdio.android.app.imgCompare.conf.js",
     "android.browser": "./node_modules/.bin/wdio ./config/wdio.android.browser.conf.js",
+    "android.browser.imgCompare": "./node_modules/.bin/wdio ./config/wdio.android.browser.imgCompare.conf.js",
     "ios.app": "./node_modules/.bin/wdio ./config/wdio.ios.app.conf.js",
+    "ios.app.imgCompare": "./node_modules/.bin/wdio ./config/wdio.ios.app.imgCompare.conf.js",
     "ios.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.ios.rdc.app.conf.js",
     "ios.browser": "./node_modules/.bin/wdio ./config/wdio.ios.browser.conf.js",
+    "ios.browser.imgCompare": "./node_modules/.bin/wdio ./config/wdio.ios.browser.imgCompare.conf.js",
     "lint": "eslint config tests"
   },
   "repository": {

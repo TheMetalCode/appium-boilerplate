@@ -8,10 +8,11 @@ exports.config = {
     jasmineNodeOpts: {
         // Updated the timeout to 30 seconds due to possible longer appium calls
         // When using XPATH
-        defaultTimeoutInterval: 90000,
+        defaultTimeoutInterval: 180000,
     },
     sync: true,
-    logLevel: 'silent',
+    logLevel: 'trace',
+    outputDir: './tmp/wdio',
     deprecationWarnings: true,
     bail: 0,
     baseUrl: 'http://the-internet.herokuapp.com',
@@ -25,11 +26,14 @@ exports.config = {
     // ====================
     services: ['appium'],
     appium: {
+        logPath: './tmp/appium',
         // For options see
         // https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-appium-service
         args: {
             // For arguments see
             // https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-appium-service
+            debugLogSpacing: true,
+            allowInsecure: 'chromedriver_autodownload,get_server_logs'
         },
         command: 'appium'
     },
