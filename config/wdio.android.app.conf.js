@@ -21,8 +21,9 @@ config.capabilities = [
         // For W3C the appium capabilities need to have an extension prefix
         // http://appium.io/docs/en/writing-running-appium/caps/
         // This is `appium:` for all Appium Capabilities which can be found here
-        'appium:deviceName': 'Pixel_8.1',
-        'appium:platformVersion': '8.1',
+        'appium:avd': 'Pixel2_10.0',
+        'appium:platformVersion': '10.0',
+        'appium:avdArgs': '-no-boot-anim',
         'appium:orientation': 'PORTRAIT',
         // `automationName` will be mandatory, see
         // https://github.com/appium/appium/releases/tag/v1.13.0

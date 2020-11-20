@@ -12,7 +12,8 @@ exports.config = {
         helpers: [require.resolve('@babel/register')],
     },
     sync: true,
-    logLevel: 'silent',
+    logLevel: 'trace',
+    outputDir: './tmp/wdio',
     deprecationWarnings: true,
     bail: 0,
     baseUrl: 'http://the-internet.herokuapp.com',
@@ -28,11 +29,13 @@ exports.config = {
         [
             'appium',
             {
+                logPath: './tmp/appium',
             // For options see
             // https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-appium-service
                 args: {
                     // Auto download ChromeDriver
                     relaxedSecurity: true,
+                    debugLogSpacing: true
                     // chromedriverAutodownload: true,
                     // For more arguments see
                     // https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-appium-service

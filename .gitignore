@@ -17,3 +17,5 @@ apps/
 chromeDriver
 
 package-lock.json
+
+tmp
